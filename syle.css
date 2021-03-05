@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+* {
+    /* box-sizing nous permet d'inclure le remplissage et la bordure dans la largeur et la hauteur totales d'un élémen*/
+    box-sizing: border-box;
+}
+
+body {
+    /*property spécifie une liste hiérarchisée d'un ou plusieurs noms de familles de polices et / ou noms de familles génériques pour l'élément sélectionné.*/
+    /* font-family: 'Potta One',sans-serif;*/
+    margin: 0;
+    background: linear-gradient(180deg, rgb(13, 9, 85) 0%, rgba(90, 24, 154, 1) 100%);
+    background-size: 100vh;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header {
+    padding: 16px;
+    justify-content: flex-end;
+    display: flex;
+}
+
+header input {
+    border-radius: 10px;
+    padding: 3px;
+    background-color: #f1f1f1;
+}
+
+.cartItems{
+    display: none;
+}
+.movie {
+    background-color: #373b69;
+    border-radius: 30px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 1.16rem;
+    width: 300px;
+    position: relative;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie_info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.3px;
+    padding: 1rem;
+    /*Relative to font-size of the root element*/
+}
+
+.movie_info h3 {
+    margin: 0;
+}
+
+.movie_info span {
+    background-color: #22254b;
+    border-radius: 9.5px;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+
+.movie_info span.vert {
+    color: rgb(6, 255, 6);
+}
+
+.movie_info span.rouge {
+    color: rgb(255, 0, 0);
+}
+
+.movie_info span.orange {
+    color: rgb(255, 94, 0);
+}
+
+.btn {
+    border-radius: 0.2px;
+    color: rgb(224, 224, 224);
+    background-color: rgba(0, 0, 0, 0);
+    transition: color 0.2s;
+    transition: background-color 0.2s;
+    margin-left: 20px;
+    margin-right: 20px;
+    size: 50px;
+}
+
+.btn:hover {
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(77, 3, 146, 0.705);
+}
+
+.search {
+    padding-right: 20px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+#title {
+    margin: 10px;
+    margin-left: 35%;
+}
+
+.addToCart {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    border: none;
+    border-radius: 7px;
+}
+.addToCart:hover{
+    background-color: rgb(46, 132, 212);
+}
+
+.movie img {
+    position: relative;
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.05);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.movie img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+#btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    size: 2em;
+}
+
+#btns button {
+    margin-left: 10px;
+    border-radius: 0.2px;
+    color: rgb(224, 224, 224);
+    background-color: rgba(0, 0, 0, 0);
+    transition: color 0.2s;
+    transition: background-color 0.2s;
+}
+
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+    margin-top: 0;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+.h1head {
+    width: 100%;
+    display: block;
+    position: absolute;
+    text-decoration: none;
+}
+
+#t {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.h1head {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+.pannier {
+    width: 50px;
+    height: 50px;
+}
+
+#cart {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+}

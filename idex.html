@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="syle.css">
+</head>
+
+<body>
+    <header>
+        <a href="idex.html" id="t">
+            <h1 class="h1head">
+                <span>N</span>
+                <span>I</span>
+                <span>G</span>
+                <span>H</span>
+                <span>M</span>
+                <span>O</span>
+                <span>V</span>
+                <span>I</span>
+                <span>E</span>
+            </h1>
+        </a>
+
+        <form action="" id="form">
+
+            <input type="text" id="search" placeholder="search for a movie" class="search">
+            <button class="btn">search</button>
+        </form>
+        <a id="cartContainer" style="cursor: pointer;">
+            <img id="cart" src="png-clipart-shopping-cart-shopping-cart.png">
+        </a>
+    </header>
+    <div id="mainItems">
+        <main id="main"></main>
+        <div id="btns"></div>
+    </div>
+    <div id="cartItems" style="flex-wrap: wrap; justify-content: space-between; flex-direction: column; display: none;">
+        <div id="test" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;">
+
+        </div>
+        <div class="footer bg-dark py-md-5">
+            <h4 class="text-muted text-center">The total Price is : <span id="priceTotal" class="text-danger">0</span> $</h4>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
